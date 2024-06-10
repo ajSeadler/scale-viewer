@@ -1,0 +1,10 @@
+.key-selector, .scale-selector {
+  margin: 1rem;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

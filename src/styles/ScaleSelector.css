@@ -1,0 +1,14 @@
+.scale-selector {
+  margin: 1rem;
+}
+
+.scale-selector h2 {
+  margin-bottom: 0.5rem;
+}
+
+.scale-selector select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
