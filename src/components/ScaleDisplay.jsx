@@ -77,7 +77,12 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
       <h2>{selectedKey} {selectedScale.replace(/([A-Z])/g, ' $1').trim()}</h2>
       <ul>
         {notes.map((note, index) => (
-          <li key={index}>{note} - {scale.degrees[index]}</li>
+          <li key={index}>
+            <span className="note">{note}</span>
+            {scale.chords.length > 0 && <span className="chord">{scale.chords[index]}</span>}
+            <span className="degree">{scale.degrees[index]}</span>
+            
+          </li>
         ))}
       </ul>
     </div>
