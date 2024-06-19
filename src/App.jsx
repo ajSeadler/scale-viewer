@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useState } from 'react';
 import CircleOfFifths from './components/CircleOfFifths';
 import ScaleSelector from './components/ScaleSelector';
@@ -10,10 +11,13 @@ const App = () => {
   const [selectedScale, setSelectedScale] = useState('');
 
   return (
-    <div>
-      <CircleOfFifths setSelectedKey={setSelectedKey} />
-      <ScaleSelector setSelectedScale={setSelectedScale} />
-      <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />
+    <div className="app-container">
+      <Header />
+      <div className="main-content">
+        <CircleOfFifths selectedKey={selectedKey} setSelectedKey={setSelectedKey} />
+        <ScaleSelector setSelectedScale={setSelectedScale} />
+        <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />
+      </div>
     </div>
   );
 };

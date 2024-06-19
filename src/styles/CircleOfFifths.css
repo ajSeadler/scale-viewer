@@ -17,7 +17,7 @@
 }
 
 .key-circle.active {
-  fill: #ff6347; /* Different color for the selected key */
+  fill: #fff; /* Different color for the selected key */
 }
 
 .key-text {
