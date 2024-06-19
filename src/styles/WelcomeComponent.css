@@ -1,8 +1,6 @@
-/* src/styles/WelcomeComponent.css */
-
 .welcome-container {
-  max-width: 90%;
-  margin: 0px auto;
+  width: auto;
+  margin: auto;
   padding: 20px;
   background: #f0f0f0;
   border: 1px solid #ccc;

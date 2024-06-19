@@ -12,8 +12,10 @@ const App = () => {
   const [selectedScale, setSelectedScale] = useState('');
 
   return (
+    <>
+    <WelcomeComponent />
     <div className="app-container">
-       <WelcomeComponent />
+       
       {/* <Header /> */}
       <div className="main-content">
        
@@ -22,6 +24,7 @@ const App = () => {
         <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />
       </div>
     </div>
+    </>
   );
 };
 
