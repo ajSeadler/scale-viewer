@@ -1,6 +1,7 @@
 .header {
-  background-color: #282c34;
-  border-radius: 20px;
-  padding: 1rem;
+  width: 100%;
+  background-color: #373E40;
+  border-radius: 0px;
+  padding: 0rem;
   color: white;
 }

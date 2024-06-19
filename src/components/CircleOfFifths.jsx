@@ -20,7 +20,7 @@ const keys = [
 const CircleOfFifths = ({ selectedKey, setSelectedKey }) => {
   return (
     <div className="circle-of-fifths">
-      <svg viewBox="0 0 200 200" width="200" height="200">
+      <svg viewBox="0 0 200 200" width="300" height="300">
         {keys.map((key) => {
           const x = 100 + 80 * Math.cos((key.angle * Math.PI) / 180);
           const y = 100 + 80 * Math.sin((key.angle * Math.PI) / 180);

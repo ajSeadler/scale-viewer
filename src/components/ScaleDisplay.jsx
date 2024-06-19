@@ -7,12 +7,12 @@ const scales = {
   Major: {
     intervals: [0, 2, 4, 5, 7, 9, 11],
     chords: ["maj", "min", "min", "maj", "maj", "min", "dim"],
-    degrees: ["I", "II", "III", "IV", "V", "VI", "VII"],
+    degrees: ["I", "ii", "iii", "IV", "V", "vi", "vii°"],
   },
   Minor: {
     intervals: [0, 2, 3, 5, 7, 8, 10],
     chords: ["min", "dim", "maj", "min", "min", "maj", "maj"],
-    degrees: ["I", "II", "III", "IV", "V", "VI", "VII"],
+    degrees: ["i", "ii°", "III", "iv", "v", "VI", "VII"],
   },
   PentatonicMajor: {
     intervals: [0, 2, 4, 7, 9],
@@ -32,37 +32,37 @@ const scales = {
   HarmonicMinor: {
     intervals: [0, 2, 3, 5, 7, 8, 11],
     chords: ["min", "dim", "aug", "min", "maj", "maj", "dim"],
-    degrees: ["I", "II", "III", "IV", "V", "VI", "VII"],
+    degrees: ["i", "ii°", "III+", "iv", "V", "VI", "vii°"],
   },
   MelodicMinor: {
     intervals: [0, 2, 3, 5, 7, 9, 11],
     chords: ["min", "min", "aug", "maj", "maj", "dim", "dim"],
-    degrees: ["I", "II", "III", "IV", "V", "VI", "VII"],
+    degrees: ["i", "ii", "III+", "IV", "V", "vi°", "vii°"],
   },
   Dorian: {
     intervals: [0, 2, 3, 5, 7, 9, 10],
     chords: ["min", "min", "maj", "maj", "min", "dim", "maj"],
-    degrees: ["I", "II", "bIII", "IV", "V", "VI", "bVII"],
+    degrees: ["i", "ii", "bIII", "IV", "v", "vi°", "bVII"],
   },
   Phrygian: {
     intervals: [0, 1, 3, 5, 7, 8, 10],
     chords: ["min", "maj", "maj", "min", "dim", "maj", "min"],
-    degrees: ["I", "bII", "bIII", "IV", "V", "bVI", "bVII"],
+    degrees: ["i", "bII", "bIII", "iv", "v°", "bVI", "bvii"],
   },
   Lydian: {
     intervals: [0, 2, 4, 6, 7, 9, 11],
     chords: ["maj", "maj", "min", "dim", "maj", "min", "maj"],
-    degrees: ["I", "II", "III", "#IV", "V", "VI", "VII"],
+    degrees: ["I", "II", "iii", "#IV°", "V", "vi", "VII"],
   },
   Mixolydian: {
     intervals: [0, 2, 4, 5, 7, 9, 10],
     chords: ["maj", "min", "dim", "maj", "maj", "min", "maj"],
-    degrees: ["I", "II", "III", "IV", "V", "VI", "bVII"],
+    degrees: ["I", "ii", "iii°", "IV", "V", "vi", "bVII"],
   },
   Locrian: {
     intervals: [0, 1, 3, 5, 6, 8, 10],
     chords: ["dim", "min", "maj", "min", "maj", "maj", "maj"],
-    degrees: ["I", "bII", "bIII", "IV", "bV", "bVI", "bVII"],
+    degrees: ["i°", "bII", "bIII", "iv", "v", "bVI", "bVII"],
   },
 };
 

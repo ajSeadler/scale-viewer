@@ -4,6 +4,7 @@ import CircleOfFifths from './components/CircleOfFifths';
 import ScaleSelector from './components/ScaleSelector';
 import ScaleDisplay from './components/ScaleDisplay';
 import Header from './components/Header';
+import WelcomeComponent from './components/WelcomeComponent'
 import './styles/App.css';
 
 const App = () => {
@@ -12,8 +13,10 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Header />
+       <WelcomeComponent />
+      {/* <Header /> */}
       <div className="main-content">
+       
         <CircleOfFifths selectedKey={selectedKey} setSelectedKey={setSelectedKey} />
         <ScaleSelector setSelectedScale={setSelectedScale} />
         <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />

@@ -1,7 +1,6 @@
-/* src/styles/ScaleDisplay.css */
-
 .scale-display {
-  max-width: 600px;
+  max-width: 100vw;
+  width: 70vw;
   margin: 20px auto;
   padding: 20px;
   background: #fff;
@@ -9,11 +8,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   font-family: 'Arial', sans-serif;
+  text-align: center;
 }
 
 .scale-display h2 {
-  text-align: center;
-  color: #333;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -21,15 +19,17 @@
 .scale-display ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .scale-display ul li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px solid #eee;
-  font-size: 18px;
+  font-size: 2rem;
+  text-align: left;
 }
 
 .scale-display ul li:nth-child(odd) {
@@ -38,9 +38,24 @@
 
 .scale-display ul li span {
   color: #555;
+  font-size: 1.1rem;
 }
 
 .scale-display ul li span.note {
   font-weight: bold;
-  color: #df6a3d;
+  color: #3B3561;
+}
+
+@media (max-width: 768px) {
+  .scale-display {
+    padding: 15px;
+  }
+
+  .scale-display h2 {
+    font-size: 20px;
+  }
+
+  .scale-display ul li {
+    font-size: 14px;
+  }
 }

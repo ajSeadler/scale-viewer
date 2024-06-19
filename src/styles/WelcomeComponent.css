@@ -1,0 +1,76 @@
+/* src/styles/WelcomeComponent.css */
+
+.welcome-container {
+  max-width: 90%;
+  margin: 0px auto;
+  padding: 20px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.welcome-container h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature {
+  flex: 1 1 300px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #555;
+}
+
+.instruction {
+  font-style: italic;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .feature {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .welcome-container h1 {
+    font-size: 28px;
+  }
+
+  .welcome-container p {
+    font-size: 16px;
+  }
+}
