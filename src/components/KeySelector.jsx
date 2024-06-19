@@ -1,8 +1,7 @@
-// src/components/KeySelector.jsx
 import React from 'react';
 import '../styles/KeySelector.css';
 
-const keys = ['C', 'C#', 'Db', 'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#', 'Ab', 'A', 'A#', 'Bb', 'B'];
+const keys = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
 
 const KeySelector = ({ setSelectedKey }) => (
   <div className="key-selector">

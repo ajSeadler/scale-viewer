@@ -10,12 +10,9 @@ const App = () => {
   const [selectedScale, setSelectedScale] = useState('');
 
   return (
-    <div className="app">
-      <Header />
-      <div className="selectors">
-        <KeySelector setSelectedKey={setSelectedKey} />
-        <ScaleSelector setSelectedScale={setSelectedScale} />
-      </div>
+    <div>
+      <KeySelector setSelectedKey={setSelectedKey} />
+      <ScaleSelector setSelectedScale={setSelectedScale} />
       <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />
     </div>
   );

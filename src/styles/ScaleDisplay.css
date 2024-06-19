@@ -1,43 +1,46 @@
 /* src/styles/ScaleDisplay.css */
+
 .scale-display {
-  margin-top: 2rem;
-}
-
-.notes {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.note, .chord {
-  background-color: #f1fb61;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
   color: #333;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 1rem;
-  margin: 0.5rem;
-  font-size: 1.2rem;
-  width: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+}
+
+.scale-display h2 {
   text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.chords {
+.scale-display ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scale-display ul li {
   display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
 }
 
-.chords h3 {
-  margin-bottom: 0.5rem;
+.scale-display ul li:nth-child(odd) {
+  background: #f9f9f9;
 }
 
-@media (max-width: 768px) {
+.scale-display ul li span {
+  color: #555;
+}
 
-  .chords {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.scale-display ul li span.note {
+  font-weight: bold;
+  color: #007bff;
 }
