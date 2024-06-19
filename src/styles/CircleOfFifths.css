@@ -1,0 +1,28 @@
+/* src/styles/CircleOfFifths.css */
+
+.circle-of-fifths {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.key-circle {
+  fill: #df6a3d;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+.key-circle:hover {
+  fill: #0056b3;
+}
+
+.key-circle.active {
+  fill: #ff6347; /* Different color for the selected key */
+}
+
+.key-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  fill: #333;
+  pointer-events: none;
+}

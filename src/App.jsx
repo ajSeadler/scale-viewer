@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import KeySelector from './components/KeySelector';
+import CircleOfFifths from './components/CircleOfFifths';
 import ScaleSelector from './components/ScaleSelector';
 import ScaleDisplay from './components/ScaleDisplay';
 import Header from './components/Header';
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div>
-      <KeySelector setSelectedKey={setSelectedKey} />
+      <CircleOfFifths setSelectedKey={setSelectedKey} />
       <ScaleSelector setSelectedScale={setSelectedScale} />
       <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />
     </div>
