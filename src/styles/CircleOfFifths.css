@@ -7,7 +7,7 @@
 }
 
 .key-circle {
-  fill: #DCEDB9;
+  fill: #ff6347;
   cursor: pointer;
   transition: fill 0.3s;
 }
@@ -17,12 +17,13 @@
 }
 
 .key-circle.active {
-  fill: #fff; /* Different color for the selected key */
+  fill: #3B3561; /* Different color for the selected key */
 }
 
 .key-text {
   font-family: 'Arial', sans-serif;
+  font-weight: bolder;
   font-size: 12px;
-  fill: #333;
+  fill: #fff;
   pointer-events: none;
 }

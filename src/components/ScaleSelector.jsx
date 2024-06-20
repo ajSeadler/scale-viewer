@@ -1,4 +1,3 @@
-// src/components/ScaleSelector.jsx
 import React from "react";
 import "../styles/ScaleSelector.css";
 
@@ -20,7 +19,7 @@ const scales = [
 const ScaleSelector = ({ setSelectedScale }) => (
   <div className="scale-selector">
     <h2>Select Scale</h2>
-    <select onChange={(e) => setSelectedScale(e.target.value)}>
+    <select className="select-dropdown" onChange={(e) => setSelectedScale(e.target.value)}>
       <option value="">--Choose a Scale--</option>
       {scales.map((scale) => (
         <option key={scale} value={scale}>

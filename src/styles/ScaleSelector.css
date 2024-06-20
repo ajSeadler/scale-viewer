@@ -1,14 +1,73 @@
+/* Scale Selector Styles */
+
 .scale-selector {
-  margin: 1rem;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  max-width: 300px; /* Adjust width as needed */
 }
 
 .scale-selector h2 {
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.scale-selector select {
-  padding: 0.5rem;
-  font-size: 1rem;
+.select-dropdown {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  appearance: none; /* Remove default arrow on some browsers */
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.select-dropdown:hover,
+.select-dropdown:focus {
+  border-color: #1a73e8; /* Adjust focus/hover color */
+}
+
+.select-dropdown option {
+  background: #fff;
+  color: #333;
+}
+
+.select-dropdown select option {
+  /* Styles for dropdown options */
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.select-dropdown select option:last-child {
+  border-bottom: none; /* Remove border for last option */
+}
+
+.select-dropdown select option:hover {
+  background-color: #f0f0f0; /* Hover color for options */
+}
+
+@media (max-width: 480px) {
+  .scale-selector {
+    padding: 15px;
+  }
+
+  .scale-selector h2 {
+    font-size: 20px;
+  }
+
+  .select-dropdown {
+    font-size: 14px;
+  }
 }

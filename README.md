@@ -1,8 +1,5 @@
-# React + Vite
+# Circle of Fifths Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Enjoy this Circle of Fifths viewer that was built using React.js!
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users are able to click on a key in the Circle of Fifths, then view various information about the key such as the scale notes, chords, and intervals.
