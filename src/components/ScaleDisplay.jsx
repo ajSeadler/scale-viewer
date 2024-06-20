@@ -83,7 +83,7 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
 
   return (
     <div ref={scaleDisplayRef} className="scale-display">
-      <h2>{selectedKey.replace(/([A-Z])/g, ' $1').trim()} {selectedScale.replace(/([A-Z])/g, ' $1').trim()}</h2>
+      <h2>{selectedKey.replace(/([A-Z])/g, ' $1').trim()} <span className="scale-name">{selectedScale.replace(/([A-Z])/g, ' $1').trim()}</span></h2>
       <ul>
         {notes.map((note, index) => (
           <li key={index}>

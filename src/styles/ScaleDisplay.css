@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+.scale-name {
+  text-transform: uppercase;
+}
+
 .scale-display ul {
   list-style-type: none;
   padding: 0;
