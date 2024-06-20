@@ -4,8 +4,9 @@
   background-color: #f9f9f9;
   color: #000;
   padding: 20px 10px;
+  margin-top: 5%;
   text-align: center;
-  width: 100%;
+  width: auto;
 }
 
 .footer-content {

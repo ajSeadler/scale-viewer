@@ -3,7 +3,13 @@
 .circle-of-fifths {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: auto;
+}
+
+.circle-svg {
+  width: 400px; /* Default width for mobile */
+  height: 400px; /* Maintain square aspect ratio */
+  margin: 10px;
 }
 
 .key-circle {
@@ -26,4 +32,12 @@
   font-size: 12px;
   fill: #fff;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .circle-svg {
+    width: 350px;
+    height: 350px;
+    
+  }
 }

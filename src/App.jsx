@@ -1,36 +1,34 @@
-// src/App.jsx
-import React, { useState } from 'react';
-import CircleOfFifths from './components/CircleOfFifths';
-import ScaleSelector from './components/ScaleSelector';
-import ScaleDisplay from './components/ScaleDisplay';
-import Header from './components/Header';
-import WelcomeComponent from './components/WelcomeComponent'
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Home from './components/Home';
 import Footer from './components/Footer';
-import './styles/App.css';
+import DiscoverScales from './components/DiscoverScales';
+import ViewChords from './components/ViewChords';
 
-const App = () => {
-  const [selectedKey, setSelectedKey] = useState('');
-  const [selectedScale, setSelectedScale] = useState('');
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function App() {
   return (
     <>
-    <WelcomeComponent />
-    <div className="app-container">
-       
-      {/* <Header /> */}
-      <div className="main-content">
-       
-        <CircleOfFifths selectedKey={selectedKey} setSelectedKey={setSelectedKey} />
-        <ScaleSelector setSelectedScale={setSelectedScale} />
-        <ScaleDisplay selectedKey={selectedKey} selectedScale={selectedScale} />
-        
+      <div>
+        <ScrollToTop />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/discover-scales' element={<DiscoverScales />} />
+          <Route path='/view-chords' element={<ViewChords />} />
+        </Routes>
+        <Footer />
       </div>
-      
-    </div>
-    <Footer />
-    
     </>
   );
-};
+}
 
 export default App;

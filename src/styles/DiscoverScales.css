@@ -1,0 +1,113 @@
+/* Discover Scales Container */
+.discover-scales {
+  max-width: 90%;
+  margin: auto;
+  padding: 2rem 1rem;
+  background: #ffffff;
+  text-align: left;
+}
+
+/* Heading */
+.discover-scales h2 {
+  font-size: 2.25rem;
+  color: #333;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Paragraph */
+.discover-scales p {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 1.875rem;
+  line-height: 1.6;
+}
+
+/* Unordered List */
+.discover-scales ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.discover-scales ul li {
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* List Item Highlight */
+.discover-scales ul li strong {
+  color: #ff6347;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-top: 1.875rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e55335;
+  transform: translateY(-0.125rem);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .discover-scales h2 {
+    font-size: 2rem;
+  }
+
+  .discover-scales p,
+  .discover-scales ul li {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    font-size: 0.9375rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-scales h2 {
+    font-size: 1.75rem;
+  }
+
+  .discover-scales p,
+  .discover-scales ul li {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .discover-scales h2 {
+    font-size: 1.5rem;
+  }
+
+  .discover-scales p,
+  .discover-scales ul li {
+    font-size: 0.875rem;
+  }
+
+  .back-button {
+    font-size: 0.8125rem;
+    padding: 0.4375rem 0.8125rem;
+  }
+}

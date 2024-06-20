@@ -1,30 +1,27 @@
-/* Scale Selector Styles */
-
 .scale-selector {
   margin: auto;
-  padding: 20px;
+  padding: 2em;
   background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
   text-align: center;
-  border-radius: 10px;
-  max-width: 300px; /* Adjust width as needed */
+  border-radius: 1em;
+  width: 75%;
 }
 
 .scale-selector h2 {
   font-size: 1.5rem;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 1.5em;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.2em;
 }
 
 .select-dropdown {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
+  padding: 1em;
+  font-size: 1em;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  appearance: none; /* Remove default arrow on some browsers */
+  border-radius: 0.5em;
+  appearance: none;
   background-color: #fff;
   color: #333;
   outline: none;
@@ -33,7 +30,7 @@
 
 .select-dropdown:hover,
 .select-dropdown:focus {
-  border-color: #1a73e8; /* Adjust focus/hover color */
+  border-color: #1a73e8;
 }
 
 .select-dropdown option {
@@ -42,32 +39,48 @@
 }
 
 .select-dropdown select option {
-  /* Styles for dropdown options */
-  padding: 10px;
+  padding: 0.8em;
   background-color: #fff;
   color: #333;
-  font-size: 16px;
+  font-size: 1em;
   border-bottom: 1px solid #ccc;
 }
 
 .select-dropdown select option:last-child {
-  border-bottom: none; /* Remove border for last option */
+  border-bottom: none;
 }
 
 .select-dropdown select option:hover {
-  background-color: #f0f0f0; /* Hover color for options */
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .scale-selector {
+    width: 75%;
+    max-width: none;
+  }
 }
 
 @media (max-width: 480px) {
   .scale-selector {
-    padding: 15px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    border: 1px solid #ccc;
   }
 
   .scale-selector h2 {
-    font-size: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
   }
 
   .select-dropdown {
-    font-size: 14px;
+    font-size: 0.875em;
+    padding: 0.8em;
+  }
+
+  .select-dropdown select option {
+    padding: 0.6em;
+    font-size: 0.875em;
   }
 }
