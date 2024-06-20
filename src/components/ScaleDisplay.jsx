@@ -1,7 +1,31 @@
-// src/components/ScaleDisplay.jsx
 import React from "react";
 import { getNoteName } from "../utils/noteMapping";
 import "../styles/ScaleDisplay.css";
+
+// 1. Import necessary utilities:
+//    - `getNoteName` function from '../utils/noteMapping' to get note names based on key and interval.
+
+// 2. Define a constant `scales` that holds various musical scales with their intervals, chords, and degrees.
+
+// 3. Define the functional component `ScaleDisplay` that takes `selectedKey` and `selectedScale` as props.
+
+// 4. Inside the component:
+//    a. Early return `null` if either `selectedKey` or `selectedScale` is falsy.
+
+//    b. Retrieve the `scale` object from `scales` based on `selectedScale`.
+
+//    c. Calculate `notes` array by mapping over `scale.intervals` and using `getNoteName(selectedKey, interval)`.
+
+//    d. Render:
+//       - `<div>` with class `scale-display`.
+//       - `<h2>` displaying `{selectedKey} {selectedScale.replace(/([A-Z])/g, ' $1').trim()}`.
+//       - `<ul>` to list musical notes and their details.
+//         - `<li>` for each note:
+//           - `<span>` with class `note` displaying the musical note.
+//           - Conditionally render `<span>` with class `chord` if `scale.chords` array is not empty.
+//           - `<span>` with class `degree` displaying the musical degree.
+   
+// 5. Export `ScaleDisplay` as the default component.
 
 const scales = {
   Major: {

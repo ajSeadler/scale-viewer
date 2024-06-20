@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMusic } from '@fortawesome/free-solid-svg-icons'; // Import a music icon from Font Awesome
+import { faMusic } from '@fortawesome/free-solid-svg-icons'; 
 
 const Footer = () => {
   return (
