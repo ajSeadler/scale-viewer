@@ -8,8 +8,10 @@ const WelcomeComponent = () => {
   return (
     <div className="welcome-container">
       <h1>The Circle of Fifths</h1><h2>visualizer</h2>
+      <p>Click on a key on the circle of fifths <a href="#circle">below</a> to get started.</p>
       
       <div className="features">
+      
         <Link to="/discover-scales" className="feature-link">
           <div className="feature">
             <FontAwesomeIcon icon={faMusic} className="feature-icon" />
@@ -32,7 +34,7 @@ const WelcomeComponent = () => {
           </div>
         </Link>
       </div>
-      <p>Click on a key on the circle of fifths <a href="#circle">below</a> to get started.</p>
+      
 
     </div>
   );

@@ -16,6 +16,18 @@
   letter-spacing: 0.2em;
 }
 
+.subtle-instruction {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #666;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2.5s ease-in-out; /* Fade-in animation */
+}
+
+.subtle-instruction.animated {
+  opacity: 1; /* Show with fade-in effect */
+}
+
 .select-dropdown {
   padding: 1em;
   font-size: 1em;
