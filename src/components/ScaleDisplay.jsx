@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { getNoteName } from "../utils/noteMapping";
 import "../styles/ScaleDisplay.css";
 
+// Define a constant `scales` that holds various musical scales with their intervals, chords, and degrees.
 const scales = {
   Major: {
     intervals: [0, 2, 4, 5, 7, 9, 11],
@@ -65,6 +66,7 @@ const scales = {
   },
 };
 
+// takes key and scale as props
 const ScaleDisplay = ({ selectedKey, selectedScale }) => {
   const scaleDisplayRef = useRef(null);
 
