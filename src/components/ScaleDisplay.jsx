@@ -67,7 +67,22 @@ const scales = {
   },
 };
 
-// takes key and scale as props
+// Utility function to get chord keys
+const getChordKeys = (note, chord) => {
+  // Example logic for chord keys
+  switch (chord) {
+    case 'maj':
+      return [`${note}/4`, `${note}maj/4`, `${note}5/4`];
+    case 'min':
+      return [`${note}/4`, `${note}m/4`, `${note}5/4`];
+    case 'dim':
+      return [`${note}/4`, `${note}dim/4`, `${note}5/4`];
+    // Add more cases for other chord types
+    default:
+      return [`${note}/4`];
+  }
+};
+
 const ScaleDisplay = ({ selectedKey, selectedScale }) => {
   const scaleDisplayRef = useRef(null);
 
@@ -82,6 +97,11 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
   const scale = scales[selectedScale];
   const notes = scale.intervals.map(interval => getNoteName(selectedKey, interval));
 
+  const chords = scale.chords.map((chord, index) => ({
+    name: `${notes[index]} ${chord}`,
+    keys: getChordKeys(notes[index], chord)
+  }));
+
   return (
     <div ref={scaleDisplayRef} className="scale-display">
       <h2>
@@ -90,6 +110,7 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
           {selectedScale.replace(/([A-Z])/g, " $1").trim()}
         </span>
       </h2>
+      <p>Scroll down to see notation and chords</p>
       <ul>
         {notes.map((note, index) => (
           <li key={index}>
@@ -102,7 +123,7 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
         ))}
       </ul>
       <div className="notation-container">
-        <MusicNotation scaleNotes={notes} />
+        <MusicNotation scaleNotes={notes} chords={chords} />
       </div>
     </div>
   );
