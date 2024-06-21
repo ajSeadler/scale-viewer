@@ -2,10 +2,10 @@
 
 .music-notation {
   margin-top: 15px;
-  padding: 10px;
+  padding: 0px;
   background-color: #fff;
   color: #ff6347;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   font-weight: bolder;
   font-size: 1.25rem;
@@ -23,3 +23,12 @@
   overflow-x: auto;
   width: 100%; /* Ensures the container expands to fit its parent */
 }
+
+.hovered-note {
+  margin-top: 10px; /* Adjust spacing as needed */
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+
