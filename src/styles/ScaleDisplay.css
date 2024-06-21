@@ -1,19 +1,26 @@
 .scale-display {
-  max-width: 100%;
-  width: 100%;
+  max-height: 400px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Enable vertical scrolling for overflow content */
   margin: 20px auto;
   padding: 20px;
   background: #fff;
   color: #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 8px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   font-family: 'Arial', sans-serif;
   text-align: center;
 }
 
+.scale-display p {
+  margin: 0px;
+  padding: 3px;
+  margin-top: -4%;
+  font-style: italic;
+}
+
 .scale-display h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-top: -1%;
 }
 
 .scale-name {
