@@ -39,7 +39,7 @@ const MusicNotation = ({ scaleNotes }) => {
             staveNote.addModifier(new Accidental(accidental));
           }
 
-          staveNote.setAttribute('id', `note-${index}`);
+          staveNote.setAttribute('id', `vf-note-${index}`);
           staveNote.setContext(context);
 
           return staveNote;
@@ -50,13 +50,13 @@ const MusicNotation = ({ scaleNotes }) => {
           beat_value: 4,
         }).addTickables(notes);
 
-        new Vex.Flow.Formatter().joinVoices([voice]).format([voice], width - 20);
+        new Vex.Flow.Formatter().joinVoices([voice]).format([voice], width - 65); // Reduce margin for better fit
 
         voice.draw(context, stave);
 
         // Add event listeners
         notes.forEach((note, index) => {
-          const noteElem = document.getElementById(`vf-note-${index}`);
+          const noteElem = document.querySelector(`#vf-note-${index} .vf-stavenote`);
           if (noteElem) {
             noteElem.addEventListener('click', () => setHoveredNote(scaleNotes[index]));
           }
@@ -67,16 +67,14 @@ const MusicNotation = ({ scaleNotes }) => {
     // Function to calculate width based on viewport size and fixed number of notes (7)
     const calculateStaffWidth = () => {
       const containerWidth = divRef.current.clientWidth;
-      const minWidth = 250; // Minimum width of the staff
-      const maxNoteWidth = 50; // Maximum width per note
       const noteCount = 7; // Fixed number of notes
+      const minWidth = 350; // Minimum width to ensure readability on mobile devices
+      const noteSpacing = Math.max(60, containerWidth / noteCount); // Ensure minimum spacing between notes
 
-      let calculatedWidth = minWidth + noteCount * maxNoteWidth;
+      let calculatedWidth = Math.max(minWidth, noteCount * noteSpacing);
 
-      // Adjust width based on container width
-      if (containerWidth < calculatedWidth) {
-        calculatedWidth = containerWidth - -20; // Adjust for padding and margins
-      }
+      // Ensure the calculated width fits within the container width
+      calculatedWidth = Math.min(containerWidth - 20, calculatedWidth); // Subtract padding/margins
 
       return calculatedWidth;
     };
@@ -93,7 +91,7 @@ const MusicNotation = ({ scaleNotes }) => {
 
   return (
     <div className="music-notation">
-      <p>Click or tap a note on the staff to reveal its name</p>
+      {/* <p>Click or tap a note on the staff to reveal its name</p> */}
       <div ref={divRef} className="staff-container"></div>
       {hoveredNote && <div className="hovered-note">{hoveredNote}</div>}
     </div>

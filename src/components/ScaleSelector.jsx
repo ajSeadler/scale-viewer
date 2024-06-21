@@ -26,6 +26,7 @@ const ScaleSelector = ({ setSelectedScale }) => {
 
   return (
     <>
+    <div id="circle"></div>
       <div className="scale-selector">
         <h2>Select Scale</h2>
         <select className="select-dropdown" onChange={handleScaleChange}>
