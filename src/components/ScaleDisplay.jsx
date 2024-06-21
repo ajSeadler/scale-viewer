@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { getNoteName } from "../utils/noteMapping";
+import MusicNotation from "./MusicNotation";
 import "../styles/ScaleDisplay.css";
 
 // Define a constant `scales` that holds various musical scales with their intervals, chords, and degrees.
@@ -83,16 +84,26 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
 
   return (
     <div ref={scaleDisplayRef} className="scale-display">
-      <h2>{selectedKey.replace(/([A-Z])/g, ' $1').trim()} <span className="scale-name">{selectedScale.replace(/([A-Z])/g, ' $1').trim()}</span></h2>
+      <h2>
+        {selectedKey.replace(/([A-Z])/g, " $1").trim()}{" "}
+        <span className="scale-name">
+          {selectedScale.replace(/([A-Z])/g, " $1").trim()}
+        </span>
+      </h2>
       <ul>
         {notes.map((note, index) => (
           <li key={index}>
             <span className="note">{note}</span>
-            {scale.chords.length > 0 && <span className="chord">{scale.chords[index]}</span>}
+            {scale.chords.length > 0 && (
+              <span className="chord">{scale.chords[index]}</span>
+            )}
             <span className="degree">{scale.degrees[index]}</span>
           </li>
         ))}
       </ul>
+      <div className="notation-container">
+        <MusicNotation scaleNotes={notes} />
+      </div>
     </div>
   );
 };
