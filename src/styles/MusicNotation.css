@@ -1,0 +1,25 @@
+/* MusicNotation.css */
+
+.music-notation {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #fff;
+  color: #ff6347;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.music-notation p {
+  font-size: 1.125rem;
+  font-weight: 100;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.875rem;
+}
+
+.staff-container {
+  overflow-x: auto;
+  width: 100%; /* Ensures the container expands to fit its parent */
+}

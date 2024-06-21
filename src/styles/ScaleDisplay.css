@@ -51,8 +51,8 @@
 }
 
 .notation-container {
-  overflow-x: auto;
-  margin-top: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
