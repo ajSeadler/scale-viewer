@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import Home from './components/Home';
-import Footer from './components/Footer';
-import DiscoverScales from './components/DiscoverScales';
-import ViewChords from './components/ViewChords';
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import DiscoverScales from "./components/DiscoverScales";
+import ViewChords from "./components/ViewChords";
+import "./styles/App.css";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -18,12 +19,12 @@ function ScrollToTop() {
 function App() {
   return (
     <>
-      <div>
+      <div className="app">
         <ScrollToTop />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/discover-scales' element={<DiscoverScales />} />
-          <Route path='/view-chords' element={<ViewChords />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/discover-scales" element={<DiscoverScales />} />
+          <Route path="/view-chords" element={<ViewChords />} />
         </Routes>
         <Footer />
       </div>

@@ -7,8 +7,8 @@
 }
 
 .circle-svg {
-  width: 400px; /* Default width for mobile */
-  height: 400px; /* Maintain square aspect ratio */
+  width: 500px; /* Default width for mobile */
+  height: 500px; /* Maintain square aspect ratio */
   margin: 10px;
 }
 
@@ -23,11 +23,11 @@
 }
 
 .key-circle.active {
-  fill: #3B3561; /* Different color for the selected key */
+  fill: #3b3561; /* Different color for the selected key */
 }
 
 .key-text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bolder;
   font-size: 12px;
   fill: #fff;
@@ -38,6 +38,5 @@
   .circle-svg {
     width: 350px;
     height: 350px;
-    
   }
 }
