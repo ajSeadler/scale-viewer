@@ -86,8 +86,7 @@ const ViewChords = () => {
             {
               width: 200,
               height: 240,
-              defaultColor: "#000", // Color for finger circles
-              circleRadius: 5, // Radius of finger circles
+              dotColor: "red", // Color for finger circles
               font: "Arial", // Font for labels
               fontSize: 14, // Font size for labels
               fontWeight: "normal", // Font weight for labels
@@ -124,9 +123,11 @@ const ViewChords = () => {
         ))}
       </div>
 
-      <Link to="/" className="back-button">
-        Back to Home
-      </Link>
+      <div className="centered-button">
+        <Link to="/" className="back-button">
+          Back to Home
+        </Link>
+      </div>
     </div>
   );
 };

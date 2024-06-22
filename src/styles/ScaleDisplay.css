@@ -1,7 +1,8 @@
 .scale-display {
-  max-height: 400px; /* Adjust the maximum height as needed */
+  max-height: 450px; /* Adjust the maximum height as needed */
   overflow-y: auto; /* Enable vertical scrolling for overflow content */
   margin: 20px auto;
+  width: 25vw;
   padding: 20px;
   background: #fff;
   color: #333;

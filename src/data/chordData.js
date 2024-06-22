@@ -1,58 +1,184 @@
-const chordData = {
-  major: {
-    name: "Major Chords",
-    chart: {
-      // Example chord chart data for C Major
-      frets: [
-        [-1, 3, 2, 0, 1, 0], // C Major chord frets
-      ],
-      fingers: [
-        [null, 3, 2, null, 1, null], // C Major chord finger positions
-      ],
-    },
-    description:
-      "Bright and happy sounding chords built from the 1st, 3rd, and 5th notes of the major scale.",
+export const chordData = [
+  {
+    type: "Cmajor",
+    name: "C Major",
+    info: "The C major scale chords include C major, D minor, E minor, F major, G major, A minor, and B diminished.",
+    chords: [
+      {
+        name: "C Major",
+        fingers: [
+          [6, 3, "3"],
+          [5, 2, "2"],
+          [4, 0, "0"],
+          [3, 1, "1"],
+          [2, 0, "0"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "D Minor",
+        fingers: [
+          [6, "x"],
+          [5, 0, "0"],
+          [4, 2, "2"],
+          [3, 2, "3"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "E Minor",
+        fingers: [
+          [6, "x"],
+          [5, 2, "3"],
+          [4, 2, "2"],
+          [3, "x"],
+          [2, "x"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "F Major",
+        fingers: [
+          [6, 1, "1"],
+          [5, 3, "3"],
+          [4, 2, "2"],
+          [3, 1, "1"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "G Major",
+        fingers: [
+          [6, 3, "4"],
+          [5, 2, "3"],
+          [4, 0, "0"],
+          [3, 0, "0"],
+          [2, 0, "0"],
+          [1, 3, "2"],
+        ],
+        barres: [],
+      },
+      {
+        name: "A Minor",
+        fingers: [
+          [6, "x"],
+          [5, 0, "0"],
+          [4, 2, "2"],
+          [3, 2, "3"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "B Diminished",
+        fingers: [
+          [6, 2, "2"],
+          [5, 3, "4"],
+          [4, 3, "3"],
+          [3, "x"],
+          [2, "x"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+    ],
   },
-  minor: {
-    name: "Minor Chords",
-    chart: {
-      // Example chord chart data for A Minor
-      frets: [
-        [0, 0, 2, 2, 1, 0], // A Minor chord frets
-      ],
-      fingers: [
-        [null, null, 2, 3, 1, null], // A Minor chord finger positions
-      ],
-    },
-    description:
-      "Sadder and darker sounding chords built from the 1st, flat 3rd, and 5th notes of the minor scale.",
+  {
+    type: "Cminor",
+    name: "C Minor",
+    info: "The C minor scale chords include C minor, D diminished, E flat major, F minor, G minor, A flat major, and B flat major.",
+    chords: [
+      {
+        name: "C Minor",
+        fingers: [
+          [6, 3, "3"],
+          [5, 1, "1"],
+          [4, 0, "0"],
+          [3, 1, "1"],
+          [2, 0, "0"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "D Diminished",
+        fingers: [
+          [6, 2, "2"],
+          [5, 3, "3"],
+          [4, 1, "1"],
+          [3, "x"],
+          [2, "x"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "E flat Major",
+        fingers: [
+          [6, 1, "1"],
+          [5, 3, "4"],
+          [4, 3, "3"],
+          [3, 1, "1"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "F Minor",
+        fingers: [
+          [6, 1, "1"],
+          [5, 3, "3"],
+          [4, 3, "2"],
+          [3, 1, "1"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "G Minor",
+        fingers: [
+          [6, 3, "3"],
+          [5, 2, "3"],
+          [4, 0, "0"],
+          [3, 0, "0"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "A flat Major",
+        fingers: [
+          [6, 4, "4"],
+          [5, 3, "3"],
+          [4, 1, "1"],
+          [3, 1, "1"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+      {
+        name: "B flat Major",
+        fingers: [
+          [6, 1, "1"],
+          [5, 3, "4"],
+          [4, 3, "3"],
+          [3, 1, "1"],
+          [2, 1, "1"],
+          [1, "x"],
+        ],
+        barres: [],
+      },
+    ],
   },
-  dominant7: {
-    name: "Dominant 7th Chords",
-    chart: {
-      // Example chord chart data for G7
-      frets: [
-        [3, 2, 0, 0, 0, 1], // G7 chord frets
-      ],
-      fingers: [
-        [3, 2, null, null, null, 1], // G7 chord finger positions
-      ],
-    },
-    description:
-      "Tense and unresolved sounding chords used frequently in blues and jazz.",
-  },
-  minor7: {
-    name: "Minor 7th Chords",
-    chart: {
-      // Example chord chart data for Dm7
-      frets: [
-        [null, null, 0, 2, 1, 1], // Dm7 chord frets
-      ],
-      fingers: [
-        [null, null, null, 2, 1, 1], // Dm7 chord finger positions
-      ],
-    },
-    description:
-      "More complex minor chords that add a flat 7th to the minor triad.",
-  },
-};
+];
