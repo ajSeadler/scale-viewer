@@ -4,7 +4,7 @@
   margin: auto;
   padding: 2rem 1rem;
   background: #ffffff;
-  text-align: left;
+  text-align: center;
 }
 
 /* Heading */
@@ -46,8 +46,7 @@
 /* Back Button */
 .back-button {
   display: inline-block;
-  margin-top: 1.875rem;
-  padding: 0.625rem 1.25rem;
+  margin: auto;
   font-size: 1rem;
   color: #ffffff;
   background-color: #ff6347;
@@ -56,6 +55,16 @@
   text-decoration: none;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.centered-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.chord-info {
+  color: #ff6347;
 }
 
 .back-button:hover {
