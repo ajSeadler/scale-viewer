@@ -1,12 +1,14 @@
 /* MusicNotation.css */
 
 .music-notation {
-  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 0px;
   background-color: #fff;
   color: #ff6347;
-  border: 2px solid #ccc;
-  border-radius: 5px;
   font-weight: bolder;
   font-size: 1.25rem;
 }
@@ -20,7 +22,7 @@
 }
 
 .staff-container {
-  overflow-x: auto;
+  overflow-x: none;
   width: 100%; /* Ensures the container expands to fit its parent */
 }
 
@@ -30,5 +32,3 @@
   font-weight: bold;
   color: black;
 }
-
-

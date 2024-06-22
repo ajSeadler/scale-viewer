@@ -1,22 +1,11 @@
-.app-container {
-  width: 100vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
-}
-
-.main-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align items to the top */
-  gap: 20px; /* Space between CircleOfFifths and ScaleDisplay */
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column; /* Stack components vertically on smaller screens */
-    align-items: center; /* Center items vertically */
-  }
+  min-height: 100vh;
 }
