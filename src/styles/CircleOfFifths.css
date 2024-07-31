@@ -1,42 +1,60 @@
-/* src/styles/CircleOfFifths.css */
+/* CircleOfFifths.css */
 
 .circle-of-fifths {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   justify-content: center;
-  margin: auto;
+  align-items: center;
 }
 
 .circle-svg {
-  width: 500px; /* Default width for mobile */
-  height: 500px; /* Maintain square aspect ratio */
-  margin: 10px;
+  width: 50vw;
+  height: auto;
 }
 
-.key-circle {
-  fill: #ff6347;
+.key-slice {
+  fill: #f0f0f0;
+  stroke: #333;
+  stroke-width: 0.5;
   cursor: pointer;
-  transition: fill 0.3s;
+  transition: fill 0.3s ease;
 }
 
-.key-circle:hover {
-  fill: grey;
-}
-
-.key-circle.active {
-  fill: #3b3561; /* Different color for the selected key */
+.key-slice.active {
+  fill: #ff6f61; /* Highlighted color */
 }
 
 .key-text {
   font-family: "Arial", sans-serif;
-  font-weight: bolder;
-  font-size: 12px;
-  fill: #fff;
+  font-size: 10px;
+  fill: #333;
+  text-anchor: middle;
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+.key-text.active {
+  fill: #fff; /* Text color for the selected key */
+  font-weight: bold; /* Make text bold */
+}
+
+.minor-text {
+  font-size: 8px;
+  fill: #555;
+}
+
+.center-text {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #333;
+  text-anchor: middle;
+}
+
+@media (max-width: 1024px) {
   .circle-svg {
-    width: 350px;
-    height: 350px;
+    width: 90vw;
+    height: auto;
   }
 }

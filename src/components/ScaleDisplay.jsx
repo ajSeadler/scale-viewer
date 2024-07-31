@@ -1,9 +1,10 @@
+// src/components/ScaleDisplay.js
 import React, { useEffect, useRef } from "react";
 import { getNoteName } from "../utils/noteMapping";
 import MusicNotation from "./MusicNotation";
 import "../styles/ScaleDisplay.css";
+import { circleOfFifths } from "../utils/noteMapping"; // Import circleOfFifths data
 
-// Define a constant `scales` that holds various musical scales with their intervals, chords, and degrees.
 const scales = {
   Major: {
     intervals: [0, 2, 4, 5, 7, 9, 11],
@@ -69,15 +70,13 @@ const scales = {
 
 // Utility function to get chord keys
 const getChordKeys = (note, chord) => {
-  // Example logic for chord keys
   switch (chord) {
-    case 'maj':
+    case "maj":
       return [`${note}/4`, `${note}maj/4`, `${note}5/4`];
-    case 'min':
+    case "min":
       return [`${note}/4`, `${note}m/4`, `${note}5/4`];
-    case 'dim':
+    case "dim":
       return [`${note}/4`, `${note}dim/4`, `${note}5/4`];
-    // Add more cases for other chord types
     default:
       return [`${note}/4`];
   }
@@ -95,12 +94,20 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
   if (!selectedKey || !selectedScale) return null;
 
   const scale = scales[selectedScale];
-  const notes = scale.intervals.map(interval => getNoteName(selectedKey, interval));
+  const notes = scale.intervals.map((interval) =>
+    getNoteName(selectedKey, interval)
+  );
 
   const chords = scale.chords.map((chord, index) => ({
     name: `${notes[index]} ${chord}`,
-    keys: getChordKeys(notes[index], chord)
+    keys: getChordKeys(notes[index], chord),
   }));
+
+  const { sharps, flats } = circleOfFifths[selectedKey];
+  const keySignature =
+    sharps > 0
+      ? `${sharps} Sharp${sharps > 1 ? "s" : ""}`
+      : `${flats} Flat${flats > 1 ? "s" : ""}`;
 
   return (
     <div ref={scaleDisplayRef} className="scale-display">
@@ -110,6 +117,7 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
           {selectedScale.replace(/([A-Z])/g, " $1").trim()}
         </span>
       </h2>
+      <p className="key-signature">{keySignature}</p>
       <p>Scroll down to see notation and chords</p>
       <ul>
         {notes.map((note, index) => (
