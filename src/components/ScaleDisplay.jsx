@@ -117,7 +117,7 @@ const ScaleDisplay = ({ selectedKey, selectedScale }) => {
           {selectedScale.replace(/([A-Z])/g, " $1").trim()}
         </span>
       </h2>
-      <p className="key-signature">{keySignature}</p>
+      {/* <p className="key-signature">{keySignature}</p> */}
       <p>Scroll down to see notation and chords</p>
       <ul>
         {notes.map((note, index) => (

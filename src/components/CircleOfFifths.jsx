@@ -65,7 +65,7 @@ const CircleOfFifths = ({ selectedKey, setSelectedKey }) => {
               </text>
 
               {/* Minor Key Text */}
-              <text
+              {/* <text
                 x={minorTextX}
                 y={minorTextY}
                 className={`key-text minor-text ${
@@ -73,7 +73,7 @@ const CircleOfFifths = ({ selectedKey, setSelectedKey }) => {
                 }`}
               >
                 {key.minor}
-              </text>
+              </text> */}
             </g>
           );
         })}
